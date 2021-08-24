@@ -27,7 +27,6 @@ import { CardDetailsComponent } from './dashboard/card-details/card-details.comp
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ServerInterceptorService } from './server-interceptor.service';
 import { TodoComponent } from './dashboard/components/todo/todo.component';
-import { FoodOrderComponent } from './dashboard/components/food-order/food-order.component';
 import { MatTableModule } from '@angular/material/table'
 import {MatDatepickerModule} from '@angular/material/datepicker';
 // import { MatMomentDateModule } from "@angular/material-moment-adapter";
@@ -47,7 +46,6 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     UserLoginComponent,
     CardDetailsComponent,
     TodoComponent,
-    FoodOrderComponent
   ],
   imports: [
     BrowserModule,

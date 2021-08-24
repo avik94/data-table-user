@@ -3,14 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TodoComponent } from './dashboard/components/todo/todo.component';
-import { FoodOrderComponent } from './dashboard/components/food-order/food-order.component';
 
 
 const routes: Routes = [
-  { path: "", redirectTo:"dashboard/todo-list", pathMatch:"full"},
+  { path: "", redirectTo:"dashboard/data-table", pathMatch:"full"},
   { path: "dashboard", component: DashboardComponent , children: [
-    {path: "todo-list", component: TodoComponent},
-    {path: "food-order", component: FoodOrderComponent},
+    {path: "data-table", component: TodoComponent},
   ]},
   { path: "login", component: LoginComponent },
 ];
