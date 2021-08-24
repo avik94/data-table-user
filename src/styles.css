@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: cursive, "Helvetica Neue", sans-serif; }
+*{
+  font-family: "Roboto", sans-serif;
+}
+hr{
+  margin: 0;
+  height: 1px;
+  background-color: lightgray;
+  border: none;
+}

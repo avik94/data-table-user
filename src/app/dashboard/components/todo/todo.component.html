@@ -1,0 +1,75 @@
+
+<div class="oprerationPanel">
+  <input type="date" [(ngModel)]="date" name="date" (input)="clickDate()">
+
+  <mat-radio-group aria-label="Select an option"  [(ngModel)]="ageFilter" name="ageFilter" (change)="chooseFilter()">
+    <mat-radio-button value="18">18+ </mat-radio-button>
+    <mat-radio-button value="45">45+</mat-radio-button>
+  </mat-radio-group>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a prsperty on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="Address">
+    <th mat-header-cell *matHeaderCellDef> Address </th>
+    <td mat-cell *matCellDef="let element"> {{element.Address}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="Fee_Type">
+    <th mat-header-cell *matHeaderCellDef> Fee_Type </th>
+    <td mat-cell *matCellDef="let element"> {{element.Fee_Type}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Available_Capacity">
+    <th mat-header-cell *matHeaderCellDef> Available_Capacity </th>
+    <td mat-cell *matCellDef="let element"> {{element.Fee_Type}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Available_capacity_dose1">
+    <th mat-header-cell *matHeaderCellDef> Available_capacity_dose1 </th>
+    <td mat-cell *matCellDef="let element"> {{element.Available_capacity_dose1}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Available_capacity_dose2">
+    <th mat-header-cell *matHeaderCellDef> Available_capacity_dose2 </th>
+    <td mat-cell *matCellDef="let element"> {{element.Available_capacity_dose2}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Fee">
+    <th mat-header-cell *matHeaderCellDef> Fee </th>
+    <td mat-cell *matCellDef="let element"> {{element.Fee}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Min_age_limit">
+    <th mat-header-cell *matHeaderCellDef> Min_age_limit </th>
+    <td mat-cell *matCellDef="let element"> {{element.Min_age_limit}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Vaccine">
+    <th mat-header-cell *matHeaderCellDef> Vaccine </th>
+    <td mat-cell *matCellDef="let element"> {{element.Vaccine}} </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
